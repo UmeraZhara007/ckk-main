@@ -12,16 +12,16 @@ const rarityWeights = [
   {
     value: "super_rare",
     from: 1,
-    to: 2
+    to: 4
   },
   {
     value: "rare",
-    from: 3,
-    to: 5
+    from: 5,
+    to: 10
   },
   {
     value: "original",
-    from: 5,
+    from: 11,
     to: editionSize
   },
 ]
@@ -58,35 +58,58 @@ const layers = [
     position: {x: 0, y: 0},
     size: { width: width, height: height },
   },
-  {    
-    id: 2,
-    name: "All_Types",
-    elements: {
-      original: getElements(`${dir}/All_Types/original`),
-      rare: getElements(`${dir}/All_Types/rare`),
-      super_rare: getElements(`${dir}/All_Types/super_rare`),
-    }, 
-    position: {x: 0, y: 0},
-    size: { width: width, height: height },
-  },
   {
-    id: 3,
-    name: "Eyes_Accessories",
-    elements:  {
-      original: getElements(`${dir}/Eyes_Accessories/original`),
-      rare: getElements(`${dir}/Eyes_Accessories/rare`),
-      super_rare: getElements(`${dir}/Eyes_Accessories/super_rare`),
+    id: 2,
+    name: "All_Gender",
+    elements: {
+      original: getElements(`${dir}/All_Gender/original`),
+      rare: getElements(`${dir}/All_Gender/rare`),
+      super_rare: getElements(`${dir}/All_Gender/super_rare`),
     },
     position: {x: 0, y: 0},
     size: { width: width, height: height },
   },
   {
+    id: 3,
+    name: "All_Generation",
+    elements: {
+      original: getElements(`${dir}/All_Generation/original`),
+      rare: getElements(`${dir}/All_Generation/rare`),
+      super_rare: getElements(`${dir}/All_Generation/super_rare`),
+    },
+    position: {x: 0, y: 0},
+    size: { width: width, height: height },
+  },
+
+  {    
     id: 4,
-    name: "U-Accessories",
+    name: "All_Species",
+    elements: {
+      original: getElements(`${dir}/All_Species/original`),
+      rare: getElements(`${dir}/All_Species/rare`),
+      super_rare: getElements(`${dir}/All_Species/super_rare`),
+    }, 
+    position: {x: 0, y: 0},
+    size: { width: width, height: height },
+  },
+  {
+    id: 5,
+    name: "Attributes",
+    elements: {
+      original: getElements(`${dir}/Attributes/original`),
+      rare: getElements(`${dir}/Attributes/rare`),
+      super_rare: getElements(`${dir}/Attributes/super_rare`),
+    },
+    position: {x: 0, y: 0},
+    size: { width: width, height: height },
+  },
+  {
+    id: 6,
+    name: "Eyes_Color",
     elements:  {
-      original: getElements(`${dir}/U-Accessories/original`),
-      rare: getElements(`${dir}/U-Accessories/rare`),
-      super_rare: getElements(`${dir}/U-Accessories/super_rare`),
+      original: getElements(`${dir}/Eyes_Color/original`),
+      rare: getElements(`${dir}/Eyes_Color/rare`),
+      super_rare: getElements(`${dir}/Eyes_Color/super_rare`),
     },
     position: {x: 0, y: 0},
     size: { width: width, height: height },
