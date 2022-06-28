@@ -62,8 +62,8 @@ const addMetadata = (_dna, _edition) => {
 const addAttributes = (_element) => {
  let selectedElement = _element.layer.selectedElement;
  attributesList.push({
-   name: selectedElement.name,
-   rarity: selectedElement.rarity,
+   trait_type: _element.layer.name,
+   value: selectedElement.name,
   });
 };
 
@@ -89,6 +89,7 @@ const constructLayerToDna = (_dna = [], _layers = [], _rarity) => {
   let mappedDnaToLayers = _layers.map((layer, index) => { 
     let selectedElement = layer.elements[_rarity][_dna[index]];
     return {
+      name: layer.name,
       location: layer.location,
       elements: layer.elements,
       position: layer.position,
